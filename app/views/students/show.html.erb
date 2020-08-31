@@ -1,0 +1,14 @@
+<h1><% if flash[:success] %>
+    <h1><%= flash[:success] %></h1>
+  <% end %></h1>
+
+<h3><%=@student.name%></h3>
+  <p>Mod: <%=@student.mod%></p>
+
+  <% @student.ducks.each do |duck| %>
+    <div><%= link_to duck.name, duck_path(duck) %></div>
+<% end %>
+
+<hr>
+<div> <%= link_to "All Students", students_path %> </div>
+<div> <%= link_to "Edit Student", edit_student_path(@student) %>
