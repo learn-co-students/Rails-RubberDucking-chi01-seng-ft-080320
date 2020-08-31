@@ -1,0 +1,10 @@
+<h1><% if flash[:success] %>
+<h1><%= flash[:success] %></h1>
+<% end %></h1>
+
+<h3>Name: <%=@duck.name%></h3>
+  <p>Description: <%=@duck.description%></p>
+
+<hr>
+<div> <%= link_to "All Ducks", ducks_path %> </div>
+<div> <%= link_to "Edit Duck", edit_duck_path(@duck) %>
