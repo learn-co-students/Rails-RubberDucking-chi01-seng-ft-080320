@@ -1,0 +1,23 @@
+<h1>Duck profile</h1>
+<h4>Name: <%= @duck.name %></h4>
+<h4>Description: <%= @duck.description %></h4>
+
+<h4>Student owner: <%= link_to @duck.student.name, student_path(@duck.student) %></h4>
+
+
+
+
+<%#   create_table "ducks", force: :cascade do |t| %>
+   <%#  t.string "name" %>
+    <%# t.text "description" %>
+   <%#  t.integer "student_id" %>
+    <%# t.datetime "created_at", null: false %>
+   <%#  t.datetime "updated_at", null: false %>
+  <%# end %>
+
+  <%# create_table "students", force: :cascade do |t| %>
+   <%#  t.string "name" %>
+    <%# t.integer "mod" %>
+    <%# t.datetime "created_at", null: false %>
+   <%#  t.datetime "updated_at", null: false %>
+  <%# end %>

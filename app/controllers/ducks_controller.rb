@@ -4,4 +4,8 @@ class DucksController < ApplicationController
     @ducks = Duck.all
   end
 
+  def show
+    @duck = Duck.find(params[:id])
+  end
+
 end
