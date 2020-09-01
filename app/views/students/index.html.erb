@@ -1,7 +1,8 @@
 <h1>These are some cool students:</h1>
 
+
 <ul>
   <% @students.each do |student| %>
-    <li> <%= student.name %> </li>
+    <li> <%= link_to student.name, student_path(student) %> </li>
   <% end %>
 </ul>

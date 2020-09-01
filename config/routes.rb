@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :ducks, only: [:index]
-  resources :students, only: [:index]
+  resources :ducks, except: [:destroy]
+  resources :students, except: [:destroy]
 end
