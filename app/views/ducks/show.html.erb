@@ -3,7 +3,8 @@
 <h4>Description: <%= @duck.description %></h4>
 
 <h4>Student owner: <%= link_to @duck.student.name, student_path(@duck.student) %></h4>
-
+<br>
+<%= button_to "Edit Duck Profile", edit_duck_path(@duck), method: :get %>
 
 
 

@@ -5,15 +5,18 @@
 <% end %>
 
 
-<%= form_for @student do |f| %>
+<%= form_for @duck do |f| %>
 
-<%= f.label :name, "Enter your name:" %>
+<%= f.label :name, "Enter duck name:" %>
 <%= f.text_field :name %>
 </br></br>
-<%= f.label :mod, "Enter your mod:" %>
-<%= f.number_field :mod %>
+<%= f.label :description, "Enter duck description:" %>
+<%= f.text_area :description %>
 </br></br>
-<%= f.submit value = "Submit new student info" %>
+<%= f.label :student_id, "Choose a student for this duck:" %>
+<%= f.collection_select(:student_id, @students, :id, :name) %>
+</br></br>
+<%= f.submit value = "Submit new duck info" %>
   
 <% end %>
 
