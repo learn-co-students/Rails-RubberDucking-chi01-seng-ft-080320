@@ -27,7 +27,7 @@ class StudentsController < ApplicationController
   end
 
   def update
-    @student = Sutdent.find(params[:id])
+    @student = Student.find(params[:id])
     @student.update(student_params)
     redirect_to student_path(@student)
   end
